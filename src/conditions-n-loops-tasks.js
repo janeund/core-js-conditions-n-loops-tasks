@@ -249,8 +249,13 @@ function isPalindrome(str) {
  *  'qwerty', 'Q'     => -1
  *  'qwerty', 'p'     => -1
  */
-function getIndexOf(/* str, letter */) {
-  throw new Error('Not implemented');
+function getIndexOf(str, letter) {
+  for (let i = 0; i < str.length; i += 1) {
+    if (str[i] === letter) {
+      return i;
+    }
+  }
+  return -1;
 }
 
 /**
@@ -268,8 +273,15 @@ function getIndexOf(/* str, letter */) {
  *  12345, 0    => false
  *  12345, 6    => false
  */
-function isContainNumber(/* num, digit */) {
-  throw new Error('Not implemented');
+function isContainNumber(num, digit) {
+  const numToStr = `${num}`;
+  const dgToStr = `${digit}`;
+  for (let i = 0; i < numToStr.length; i += 1) {
+    if (numToStr[i] === dgToStr) {
+      return true;
+    }
+  }
+  return false;
 }
 
 /**
